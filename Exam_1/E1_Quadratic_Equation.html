@@ -14,19 +14,19 @@
 
     <script>
 
-        function formatNumber(Number) {
+        function formatNumber(number) {
 
-            return Number.toFixed(2);
+            return number.toFixed(2);
 
         };
 
-        function quadraticEquation(A, B, C) {
+        function quadraticEquation(a, b, c) {
 
-            if (A == 0) {
+            if (a == 0) {
 
-                if (B == 0) {
+                if (b == 0) {
 
-                    if (C == 0) {
+                    if (c == 0) {
 
                         alert(`Phương trình có vô số nghiệm.`);
 
@@ -42,7 +42,7 @@
 
                 else {
 
-                    alert(`Phương trình có nghiệm duy nhất là: ${formatNumber((-C / B))}`);
+                    alert(`Phương trình có nghiệm duy nhất là: ${formatNumber((-c / b))}`);
 
                 };
 
@@ -50,12 +50,12 @@
 
             else {
 
-                const delta = (B * B) - (4 * A * C);
+                const delta = (b * b) - (4 * a * c);
 
                 if (delta > 0) {
 
-                    const x1 = (-B + Math.sqrt(delta)) / (2 * A);
-                    const x2 = (-B - Math.sqrt(delta)) / (2 * A);
+                    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
 
                     alert(`Phương trình có nghiệm là: x1 = ${formatNumber(x1)} và x2 = ${formatNumber(x2)}`);
 
@@ -63,7 +63,7 @@
 
                 else if (delta == 0) {
 
-                    const sum = (-B / 2 * A);
+                    const sum = (-b / 2 * a);
 
                     alert(`Phương trình có nghiệm kép là: x1 = x2 = ${formatNumber(sum)}`);
 
