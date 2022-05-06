@@ -14,21 +14,27 @@
 
     <script>
 
-        function quadraticEquation(a, b, c) {
+        function formatNumber(Number) {
 
-            if (a == 0) {
+            return Number.toFixed(2);
 
-                if (b == 0) {
+        };
 
-                    if (c == 0) {
+        function quadraticEquation(A, B, C) {
 
-                        alert("Phương trình vô nghiệm.");
+            if (A == 0) {
+
+                if (B == 0) {
+
+                    if (C == 0) {
+
+                        alert(`Phương trình có vô số nghiệm.`);
 
                     }
                     
                     else {
 
-                        alert("Phương trình vô nghiệm.");
+                        alert(`Phương trình vô nghiệm.`);
 
                     };
 
@@ -36,7 +42,7 @@
 
                 else {
 
-                    alert(`Phương trình có nghiệm duy nhất là: ${-c / b}`);
+                    alert(`Phương trình có nghiệm duy nhất là: ${formatNumber((-C / B))}`);
 
                 };
 
@@ -44,28 +50,28 @@
 
             else {
 
-                const delta = (b * b) - (4 * a * c);
+                const delta = (B * B) - (4 * A * C);
 
                 if (delta > 0) {
 
-                    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
-                    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    const x1 = (-B + Math.sqrt(delta)) / (2 * A);
+                    const x2 = (-B - Math.sqrt(delta)) / (2 * A);
 
-                    alert(`Phương trình có nghiệm là: x1 = ${x1} và x2 = ${x2}`);
+                    alert(`Phương trình có nghiệm là: x1 = ${formatNumber(x1)} và x2 = ${formatNumber(x2)}`);
 
                 }
 
                 else if (delta == 0) {
 
-                    const sum = (-b / 2 * a);
+                    const sum = (-B / 2 * A);
 
-                    alert(`Phương trình có nghiệm kép là: x1 = x2 = ${sum}`);
+                    alert(`Phương trình có nghiệm kép là: x1 = x2 = ${formatNumber(sum)}`);
 
                 }
 
                 else {
 
-                    alert("Phương trình vô nghiệm.");
+                    alert(`Phương trình vô nghiệm.`);
 
                 };
 
