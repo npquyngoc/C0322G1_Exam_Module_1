@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam 2 - Search Array</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        function searchArray() {
+
+            const arrayCharacter = [1, 3, 5, 7, 9], getNumber = Number(prompt("Nhập vào giá trị bất kì:"));
+
+            for (let i = 0; i < arrayCharacter.length; i++) {
+
+                if (getNumber == arrayCharacter[i]) {
+
+                    alert(`Số ${getNumber} có trong mảng.`);
+                    break;
+
+                }
+
+                else {
+
+                    if (i == (arrayCharacter.length - 1)) {
+
+                        alert(`Số ${getNumber} không có trong mảng.`);
+                        break;
+
+                    };
+
+                };
+
+            };
+
+        };
+
+        searchArray();
+
+    </script>
+
+</body>
+
+</html>

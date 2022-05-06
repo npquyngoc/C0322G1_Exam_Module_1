@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam 4 - Classes Constructor</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        class Staff {
+
+            constructor(Fullname, Email) {
+
+                this.Fullname = Fullname;
+                this.Email = Email;
+
+                this.setFullname = function (Value) {
+
+                    return this.Fullname = Value;
+
+                };
+
+                this.getFullname = function () {
+
+                    return this.Fullname;
+
+                };
+
+                this.setEmail = function (Value) {
+
+                    return this.Email = Value;
+
+                };
+
+                this.getEmail = function () {
+
+                    return this.Email;
+
+                };
+
+                this.toString = function () {
+
+                    return `Fullname: ${this.Fullname}<br>Email: ${this.Email}<br><br>`;
+
+                };
+
+            };
+
+        };
+
+        const david = new Staff("David", "david@gmail.com");
+
+        david.setFullname("David Do");
+        david.setEmail("david.do@gmail.com");
+
+        document.write(david.toString());
+
+        const staffs = [
+
+            david,
+
+            new Staff("Tien", "tien@gmail.com"),
+            new Staff("Ngoc", "ngoc@gmail.com"), 
+            new Staff("Luong", "luong@gmail.com"),
+
+        ];
+
+        for (let i = 0; i < staffs.length; i++) {
+
+            document.write(staffs[i].toString());
+
+        };
+
+    </script>
+
+</body>
+
+</html>
