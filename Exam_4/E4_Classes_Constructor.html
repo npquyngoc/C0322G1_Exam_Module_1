@@ -16,38 +16,38 @@
 
         class Staff {
 
-            constructor(Fullname, Email) {
+            constructor(fullname, email) {
 
-                this.Fullname = Fullname;
-                this.Email = Email;
+                this.fullname = fullname;
+                this.email = email;
 
-                this.setFullname = function (Value) {
+                this.setFullname = function (value) {
 
-                    return this.Fullname = Value;
+                    return this.fullname = value;
 
                 };
 
                 this.getFullname = function () {
 
-                    return this.Fullname;
+                    return this.fullname;
 
                 };
 
-                this.setEmail = function (Value) {
+                this.setEmail = function (value) {
 
-                    return this.Email = Value;
+                    return this.email = value;
 
                 };
 
                 this.getEmail = function () {
 
-                    return this.Email;
+                    return this.email;
 
                 };
 
                 this.toString = function () {
 
-                    return `Fullname: ${this.Fullname}<br>Email: ${this.Email}<br><br>`;
+                    return `Fullname: ${this.fullname}<br>Email: ${this.email}<br><br>`;
 
                 };
 
